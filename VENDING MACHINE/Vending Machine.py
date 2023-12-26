@@ -1,3 +1,4 @@
+# Define the VendingMachine class
 class VendingMachine:
     def __init__(self):
         # MENU ITEMS WITH CODES, PRICES ADN AND CATEGORIES.
@@ -14,7 +15,7 @@ class VendingMachine:
             'J5': {'name': 'FRESH JUICE', 'price': 2.00, 'category': 'Drinks'},
             'K6': {'name': 'KINDER JOY', 'price': 4.00, 'category': 'Chocolate'}
         }
-
+# Display a stylized header
     def display_menu(self):
         print("""\n █░█░█ █▀▀ █░░ █▀▀ █▀█ █▀▄▀█ █▀▀   ▀█▀ █▀█   █▄░█ ▄▀█ ░░█ █░█░█ ▄▀█ █▄░█ ▀ █▀   █░█ █▀▀ █▄░█ █▀▄ █ █▄░█ █▀▀
  ▀▄▀▄▀ ██▄ █▄▄ █▄▄ █▄█ █░▀░█ ██▄   ░█░ █▄█   █░▀█ █▀█ █▄█ ▀▄▀▄▀ █▀█ █░▀█ ░ ▄█   ▀▄▀ ██▄ █░▀█ █▄▀ █ █░▀█ █▄█
@@ -37,28 +38,28 @@ vm.display_menu()
 
 count = 1
 totalCredit = 0
-
+# Get the number of coins the user wants to enter
 coinNum = int(input("How many coins would you like to enter: "))
-
+# Loop to collect coin values and calculate total credit
 while count <= coinNum:
     coin = float(input("Enter coin: $ "))
     totalCredit += coin
     count += 1
-
+# Display the total amount inserted
 print("You have ${:.2f} in your bank.".format(round(totalCredit, 2)))
 
 finalCredit = round(totalCredit, 2)
-
+# Get the item code from the user
 item_code = input("𝐷𝑜 𝑦𝑜𝑢 𝑘𝑛𝑜𝑤 𝑜𝑢𝑟 𝑝𝑟𝑖𝑚𝑒 𝑖𝑠 𝑎 𝑐𝑢𝑠𝑡𝑜𝑚𝑒𝑟 𝑓𝑎𝑣𝑜𝑢𝑟𝑖𝑡𝑒? 𝐺𝑖𝑣𝑒 𝑖𝑡 𝑎 𝑡𝑟𝑦....Enter the code for your item:")
 
 while item_code not in vm.menu:
     print("Invalid item code. Please enter a valid code.")
     item_code = input("Enter the code for your item: ")
-
+# Get the selected item from the menu
 selected_item = vm.menu[item_code]
 finalCredit -= selected_item['price']
 
-#Invalidating the vending machine due to certain circumstances.
+# Display an error message if the credit is insufficient
 if totalCredit < selected_item['price']:
     print("INVALID AMOUNT.THE AMOUNT YOU HAVE INSERTED IS NOT ENOUGH FOR THIS ITEM, PLEASE SELECT ANOTHER ITEM OR INSERT MORE MONEY.YOUR CHANGE WILL BE DISPENSED. PLEASE RUN THE VENDING MACHINE AGAIN. THANK YOU ")
 else:
