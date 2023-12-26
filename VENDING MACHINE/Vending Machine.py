@@ -12,6 +12,7 @@ class VendingMachine:
             'H3': {'name': 'PRIME', 'price': 20.00, 'category': 'Premium'},
             'I4': {'name': 'WATER', 'price': 1.25, 'category': 'Drinks'},
             'J5': {'name': 'FRESH JUICE', 'price': 2.00, 'category': 'Drinks'},
+            'K6': {'name': 'KINDER JOY', 'price': 4.00, 'category': 'Chocolate'}
         }
 
     def display_menu(self):
