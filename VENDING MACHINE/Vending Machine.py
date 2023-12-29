@@ -3,17 +3,20 @@ class VendingMachine:
     def __init__(self):
         # MENU ITEMS WITH CODES, PRICES ADN AND CATEGORIES.
         self.menu = {
-            'A1': {'name': 'DORITOS', 'price': 3.00, 'category': 'Snacks'},
+            'K6': {'name': 'KINDER JOY', 'price': 4.00, 'category': 'Chocolate'},
             'B2': {'name': 'GALAXY', 'price': 3.50, 'category': 'Chocolate'},
+            'M2': {'name': 'BOUNTY', 'price': 2.50, 'category': 'Chocolate'},
+
+            'A1': {'name': 'DORITOS', 'price': 3.00, 'category': 'Snacks'},
             'C3': {'name': 'OMAN CHIPS', 'price': 1.50, 'category': 'Snacks'},
-            'D4': {'name': 'REDBULL', 'price': 22.25, 'category': 'Drinks'},
             'E5': {'name': 'BISCUITS', 'price': 2.00, 'category': 'Snacks'},
+
+            'D4': {'name': 'REDBULL', 'price': 22.25, 'category': 'Drinks'},
             'F1': {'name': 'COCA COLA', 'price': 3.00, 'category': 'Drinks'},
             'G2': {'name': 'ICED COFFEE', 'price': 3.50, 'category': 'Drinks'},
-            'H3': {'name': 'PRIME', 'price': 20.00, 'category': 'Premium'},
+            'H3': {'name': 'PRIME', 'price': 20.00, 'category': 'Drinks'},
             'I4': {'name': 'WATER', 'price': 1.25, 'category': 'Drinks'},
-            'J5': {'name': 'FRESH JUICE', 'price': 2.00, 'category': 'Drinks'},
-            'K6': {'name': 'KINDER JOY', 'price': 4.00, 'category': 'Chocolate'}
+            'J5': {'name': 'MELCO', 'price': 2.00, 'category': 'Drinks'}
         }
 # Display a stylized header
     def display_menu(self):
